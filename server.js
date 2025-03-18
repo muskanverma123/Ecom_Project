@@ -14,6 +14,10 @@ app.use("/product",productRoute)
 app.use("/order",orderRoute)
 const  port = process.env.PORT
 
+app.get('/',(req,res)=>{
+    res.send("hello from server testing")
+  })
+
 app.listen(port,()=>{
     connectDb()
     console.log("server is running on port 9000")
